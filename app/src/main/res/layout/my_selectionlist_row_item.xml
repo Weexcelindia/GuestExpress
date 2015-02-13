@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="130dp"
+        android:background="@drawable/ic_pizza_pic" >
+
+        <com.weexcel.guestexpress.util.applyfont.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black_transparent"
+            android:padding="8dp"
+            android:text="@string/pizza"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/splash_offer"
+            app:quickfont="Roboto-Regular_0.ttf"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical" >
+
+        <com.weexcel.guestexpress.util.applyfont.TextView
+            android:id="@+id/tv_itemname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="@string/cheese_pizza"
+            android:textColor="@color/myselection_item_name"
+            android:textSize="@dimen/splash_item_name"
+            android:textStyle="bold"
+            app:quickfont="Roboto-Regular_0.ttf"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_itemname"
+            android:layout_marginTop="5dp" >
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_launcher"
+                android:visibility="gone"/>
+
+            <com.weexcel.guestexpress.util.applyfont.TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/logo"
+                android:text="@string/amount_pounds"
+                android:textColor="@color/light_grey"
+                android:textSize="@dimen/splash_item_name"
+                app:quickfont="Roboto-Regular_0.ttf"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+
+            <com.weexcel.guestexpress.util.applyfont.TextView
+                android:id="@+id/tv_minus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_minus_button"
+                android:text="__"
+                android:paddingLeft="12dp"
+                android:paddingTop="3dp"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="@color/textWhite"
+                android:textSize="18sp"
+                app:quickfont="Roboto-Regular_0.ttf"
+                />
+
+            <com.weexcel.guestexpress.util.applyfont.TextView
+                android:id="@+id/tv_plus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:background="@drawable/bg_plus_button"
+                android:gravity="center"
+                android:text="+"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="@color/textWhite"
+                app:quickfont="Roboto-Regular_0.ttf"
+                />
+
+            <com.weexcel.guestexpress.util.applyfont.TextView
+                android:id="@+id/tv_pos"
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/tv_minus"
+                android:layout_toLeftOf="@+id/tv_plus"
+                android:textSize="@dimen/splash_rate"
+                android:text="@string/item_count"
+                android:textStyle="bold"
+                android:textColor="@color/darker_grey"
+                app:quickfont="Roboto-Regular_0.ttf"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

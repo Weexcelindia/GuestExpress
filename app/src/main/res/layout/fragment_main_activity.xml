@@ -1,0 +1,227 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/ic_pizzahut"
+            android:orientation="vertical" >
+
+            <com.weexcel.guestexpress.util.applyfont.TextView
+                android:id="@+id/welcome_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/welcome_to"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/welcome_to"
+                app:quickfont="Roboto-Regular_0.ttf"
+                />
+
+            <com.weexcel.guestexpress.util.applyfont.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/welcome_to"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/hotel_park_plaza"
+                android:textColor="@color/textWhite"
+                app:quickfont="Roboto-Regular_0.ttf"
+                android:textSize="@dimen/hotel_name"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/black_transparent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_online" />
+
+                <com.weexcel.guestexpress.util.applyfont.TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/online"
+                    app:quickfont="Roboto-Regular_0.ttf"
+                    android:textColor="@color/textWhite"
+                    android:textSize="@dimen/welcome_to"
+                    />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/ic_upcoming"
+                    />
+
+                <com.weexcel.guestexpress.util.applyfont.TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="@string/upcoming"
+                    app:quickfont="Roboto-Regular_0.ttf"
+                    android:textColor="@color/textWhite"
+                    android:textSize="@dimen/welcome_to"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.weexcel.guestexpress.util.applyfont.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/TorchRed"
+            android:padding="10dp"
+            android:text="@string/top_offerings_today"
+            android:textColor="@color/textWhite"
+            app:quickfont="Roboto-Regular_0.ttf"
+            android:textSize="@dimen/actionBarTitle" >
+        </com.weexcel.guestexpress.util.applyfont.TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/_pager"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent" />
+
+            <com.weexcel.guestexpress.view.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/actionBarBackground"
+                android:padding="10dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.weexcel.guestexpress.view.NestedListView
+                android:id="@+id/crewList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:cacheColorHint="#00000000" >
+            </com.weexcel.guestexpress.view.NestedListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.weexcel.guestexpress.view.NestedListView
+                android:id="@+id/benchmarksList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:cacheColorHint="#00000000" >
+            </com.weexcel.guestexpress.view.NestedListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/TorchRed"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/layoutButtonProduct"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_product"
+                    android:padding="4dp"
+                    />
+
+                <com.weexcel.guestexpress.util.applyfont.TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/products"
+                    app:quickfont="Roboto-Regular_0.ttf"
+                    android:textColor="@color/textWhite"
+                    android:textSize="@dimen/splash_offer"
+                    android:id="@+id/textViewProducts"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/layoutButtonMySelection">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_my_selection"
+                    android:padding="4dp"/>
+
+                <com.weexcel.guestexpress.util.applyfont.TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_selection"
+                    app:quickfont="Roboto-Regular_0.ttf"
+                    android:textColor="@color/textWhite"
+                    android:textSize="@dimen/splash_offer"
+                    android:id="@+id/textViewMySelection"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/layoutButtonSettings">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_settings"
+                    android:padding="4dp"
+                    />
+
+                <com.weexcel.guestexpress.util.applyfont.TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings"
+                    app:quickfont="Roboto-Regular_0.ttf"
+                    android:textColor="@color/textWhite"
+                    android:textSize="@dimen/splash_offer"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

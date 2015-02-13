@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="actionBarBackground">#d9d9d9</color>
+    <color name="actionBarTitleText">#b09861</color>
+    <color name="actionBarOverFlowIcons">#000000</color>
+    <color name="actionBarCartNotification">#ce493f</color>
+    <color name="textWhite">#FFFFFF</color>
+    <color name="black_transparent">#80000000</color>
+    <color name="TorchRed">#b09861</color>
+    <color name="light_grey">#888888</color>
+    <color name="darker_grey">#404040</color>
+    <color name="buttonsbackground">#948a54</color>
+    <color name="bg_btn_get_this">#92D050</color>
+    <color name="bg_btn_my_orders">#C4BD97</color>
+    <color name="myselection_item_name">#7F7F7F</color>
+    <color name="myselection_minusbtn">#989898</color>
+    <color name="progressbar_bg">#C4BD97</color>
+</resources>

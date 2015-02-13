@@ -1,0 +1,18 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="actionBarTitle">22sp</dimen>
+    <dimen name="notificationCountSize">18sp</dimen>
+
+    <!--Splash items text sizes-->
+    <dimen name="splash_item_name">24sp</dimen>
+    <dimen name="splash_offer">18sp</dimen>
+    <dimen name="splash_rate">26sp</dimen>
+
+    <dimen name="welcome_to">14sp</dimen>
+    <dimen name="hotel_name">22sp</dimen>
+
+
+
+</resources>

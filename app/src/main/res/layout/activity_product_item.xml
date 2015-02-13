@@ -1,0 +1,198 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/_pager"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent" />
+
+        <com.weexcel.guestexpress.view.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/actionBarBackground"
+            android:padding="10dip"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/img_DeliveryTime"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_clock"
+                android:padding="4dp"
+                />
+
+            <ImageView
+                android:id="@+id/img_DeliveryBoy"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_toRightOf="@+id/img_DeliveryTime"
+                android:src="@drawable/ic_walking_man"
+                android:padding="4dp"
+
+                />
+
+            <com.weexcel.guestexpress.util.applyfont.TextView
+                android:id="@+id/textView_Time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/img_DeliveryBoy"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/dummy_text_time"
+                android:textSize="@dimen/welcome_to"
+                app:quickfont="Roboto-Regular_0.ttf"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/img_LocationMarker"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_location_marker"
+                android:padding="4dp"
+                />
+
+            <ImageView
+                android:id="@+id/img_DeliveryBoy2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_toRightOf="@+id/img_LocationMarker"
+                android:src="@drawable/ic_walking_man"
+                android:padding="4dp"
+                />
+
+            <com.weexcel.guestexpress.util.applyfont.TextView
+                android:id="@+id/tv_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/img_DeliveryBoy2"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/dummy_text_place"
+                android:textSize="@dimen/welcome_to"
+                app:quickfont="Roboto-Regular_0.ttf"
+                />
+        </RelativeLayout>
+
+        <com.weexcel.guestexpress.util.applyfont.TextView
+            android:id="@+id/textView_Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/dummy_text_some"
+            android:textSize="@dimen/welcome_to"
+            app:quickfont="Roboto-Regular_0.ttf"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <com.weexcel.guestexpress.util.applyfont.TextView
+                android:id="@+id/textView_Rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_grey"
+                android:text="Rate"
+                android:textSize="@dimen/welcome_to"
+                app:quickfont="Roboto-Regular_0.ttf"
+                />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_toRightOf="@+id/textView_Rate"
+                android:rating="4"
+                android:numStars="5"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <com.weexcel.guestexpress.util.applyfont.TextView
+                android:id="@+id/textView_Category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_grey"
+                android:text="Category"
+                app:quickfont="Roboto-Regular_0.ttf"
+                android:gravity="center"
+                android:layout_marginTop="2dp"
+                />
+
+            <com.weexcel.guestexpress.util.applyfont.TextView
+                android:id="@+id/textView_Eat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/textView_Category"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/buttonsbackground"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/eat"
+                android:textSize="@dimen/welcome_to"
+                app:quickfont="Roboto-Regular_0.ttf"
+                android:layout_marginTop="2dp"
+                />
+
+            <ImageView
+                android:layout_toRightOf="@+id/textView_Eat"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_right_arrow_coloured"
+                android:layout_centerHorizontal="true"
+                />
+        </RelativeLayout>
+
+        <com.weexcel.guestexpress.util.applyfont.TextView
+            android:id="@+id/textView_Ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/dummy_ingredients"
+            android:textSize="@dimen/welcome_to"
+            app:quickfont="Roboto-Regular_0.ttf"
+            />
+    </LinearLayout>
+
+</LinearLayout>

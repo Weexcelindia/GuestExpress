@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@drawable/ic_pizaa_row"
+    >
+
+    <com.weexcel.guestexpress.util.applyfont.TextView
+        android:id="@+id/welcome_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/row_item_name"
+        android:textColor="@color/textWhite"
+        app:quickfont="Roboto-Regular_0.ttf"
+        android:textSize="@dimen/splash_item_name" />
+
+    <com.weexcel.guestexpress.util.applyfont.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome_to"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/row_item_description"
+        android:textColor="@color/textWhite"
+        app:quickfont="Roboto-Regular_0.ttf"
+        android:textSize="@dimen/splash_offer" />
+
+    <com.weexcel.guestexpress.util.applyfont.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="@string/row_item_rate"
+        android:padding="8dp"
+        android:textColor="@color/textWhite"
+        app:quickfont="Roboto-Regular_0.ttf"
+        android:textSize="@dimen/splash_rate"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_transparent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="2dp" >
+
+        <com.weexcel.guestexpress.util.applyfont.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/eat"
+            app:quickfont="Roboto-Regular_0.ttf"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/welcome_to"
+            />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_right_arrow"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

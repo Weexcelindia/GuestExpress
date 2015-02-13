@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@drawable/ic_pizzahut_topofferings"
+    android:orientation="vertical" >
+
+    <com.weexcel.guestexpress.util.applyfont.TextView
+        android:id="@+id/welcome_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/splash1_item_name"
+        android:textColor="@color/textWhite"
+        app:quickfont="Roboto-Regular_0.ttf"
+        android:textSize="@dimen/splash_item_name" />
+
+    <com.weexcel.guestexpress.util.applyfont.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome_to"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/splash1_offer"
+        android:textColor="@color/textWhite"
+        app:quickfont="Roboto-Regular_0.ttf"
+        android:textSize="@dimen/splash_offer"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_transparent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_launcher"
+            android:visibility="gone"
+            />
+
+        <com.weexcel.guestexpress.util.applyfont.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/splash1_rate"
+            app:quickfont="Roboto-Regular_0.ttf"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/splash_rate"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@color/actionBarBackground"
+    
+     >
+    <ImageView 
+        android:id="@+id/iv_image"
+        android:layout_height="32dp"
+        android:layout_width="32dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_down_arrow"
+        />
+    <com.weexcel.guestexpress.util.applyfont.TextView
+        android:id="@+id/listview_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentLeft="true"
+        android:text="@string/more_items"
+        android:textSize="@dimen/splash_item_name"
+        app:quickfont="Roboto-Regular_0.ttf"
+        android:textColor="@color/textWhite"
+        >
+    </com.weexcel.guestexpress.util.applyfont.TextView>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        />
+
+</RelativeLayout>
