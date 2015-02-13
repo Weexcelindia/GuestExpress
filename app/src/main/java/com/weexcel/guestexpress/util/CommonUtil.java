@@ -16,8 +16,11 @@ import android.widget.TextView;
 import com.weexcel.guestexpress.R;
 
 /**
- * Created by WE Excel on 11-Feb-15.
+ * Created by WE Excel
+ * In this class some methods and variable are being declared to use through out the application to avoid code repetition
  */
+
+
 public class CommonUtil {
 
     public static String roboto_regular = "Roboto-Regular_0.ttf";
@@ -28,6 +31,11 @@ public class CommonUtil {
     static Handler handler = new Handler();
 
 
+    /***
+     *
+     * @param context
+     * Method to showDialog
+     */
     public static void showDialog(Context context) {
         if (dialog == null || !dialog.isShowing()) {
 

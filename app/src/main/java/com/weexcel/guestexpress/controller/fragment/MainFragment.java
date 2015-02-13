@@ -245,7 +245,6 @@ public class MainFragment extends Fragment {
         startActivity(openMySelections);
         getActivity().overridePendingTransition(R.anim.push_up_out, R.anim.push_up_in);
     }
-
 }
 
 /*** Class Ends ***/

@@ -1,5 +1,8 @@
-package com.weexcel.guestexpress.controller.fragment;
+package com.weexcel.guestexpress.controller.fragment;  //package name
 
+/***
+ * @author: WE Excel
+ */
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

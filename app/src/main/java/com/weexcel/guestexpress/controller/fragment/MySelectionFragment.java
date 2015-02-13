@@ -2,6 +2,7 @@ package com.weexcel.guestexpress.controller.fragment; //Package name
 
 /***
  * @author: WE Excel
+ * Within this class the My Selection Screen is being Managed
  */
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,11 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-
 import com.weexcel.guestexpress.R;
 import com.weexcel.guestexpress.adapter.MySelectionListAdapter;
 import com.weexcel.guestexpress.util.CommonUtil;
-
 
 
 public class MySelectionFragment extends Fragment {
@@ -44,6 +43,11 @@ public class MySelectionFragment extends Fragment {
         return rootView;
     }
 
+    /***
+     *
+     * @param rootView
+     * User Defined method to initialize the UI and the variables
+     */
     private void initUI(View rootView) {
         listView_ProductList = (ListView) rootView.findViewById(R.id.lv_productlist);
         btnGetThis = (LinearLayout) rootView.findViewById(R.id.layoutButtonGetThis);
