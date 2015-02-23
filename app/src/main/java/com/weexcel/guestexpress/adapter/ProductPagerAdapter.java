@@ -13,6 +13,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import com.weexcel.guestexpress.controller.fragment.ProductFragment;
+import com.weexcel.guestexpress.controller.fragment.ProductFragment2;
+import com.weexcel.guestexpress.controller.fragment.ProductFragment3;
 
 /** Class Starts **/
 public class ProductPagerAdapter extends FragmentPagerAdapter {
@@ -40,10 +42,10 @@ public class ProductPagerAdapter extends FragmentPagerAdapter {
 			f = ProductFragment.newInstance(_context);
 			break;
 		case 1:
-			f = ProductFragment.newInstance(_context);
+			f = ProductFragment2.newInstance(_context);
 			break;
 		case 2:
-			f = ProductFragment.newInstance(_context);
+			f = ProductFragment3.newInstance(_context);
 			break;
 		}
 		return f;

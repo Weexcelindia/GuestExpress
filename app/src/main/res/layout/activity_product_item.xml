@@ -1,20 +1,25 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
     >
 
-    <LinearLayout
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
-
+        >
         <android.support.v4.view.ViewPager
             android:id="@+id/_pager"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_gravity="center"
+            android:layout_alignParentTop="true"
             android:background="@android:color/transparent" />
 
         <com.weexcel.guestexpress.view.CirclePageIndicator
@@ -23,9 +28,102 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@color/actionBarBackground"
+            android:layout_below="@+id/_pager"
             android:padding="10dip"
             />
-    </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black_transparent"
+                >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical"
+                android:padding="8dp" >
+
+                <com.weexcel.guestexpress.util.applyfont.TextView
+                    android:id="@+id/tv_itemname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="@string/meanwhile_chillies"
+                    android:textColor="@color/textWhite"
+                    app:quickfont="Roboto-Regular_0.ttf"
+                    android:textSize="@dimen/splash_item_name" />
+
+                <com.weexcel.guestexpress.util.applyfont.TextView
+                    android:id="@+id/tv_itemextra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="@string/dish_name"
+                    android:textColor="@color/textWhite"
+                    app:quickfont="Roboto-Regular_0.ttf"
+                    android:textSize="@dimen/splash_offer" />
+            </LinearLayout>
+
+            <com.weexcel.guestexpress.util.applyfont.TextView
+                android:id="@+id/tv_itemprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/amount_pounds"
+                android:padding="8dp"
+                android:textColor="@color/textWhite"
+                app:quickfont="Roboto-Regular_0.ttf"
+                android:textSize="@dimen/splash_rate" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="10dp"
+
+                android:background="@drawable/bg_order_button"
+                >
+                <ImageView
+                    android:id="@+id/iv_order_icon"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:padding="7dp"
+                    android:src="@drawable/ic_order_icon"
+                    android:layout_alignParentLeft="true"
+                    />
+                <ImageView
+                    android:id="@+id/iv_order_arrow"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:src="@drawable/ic_order_arrow"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp"
+                    />
+                <com.weexcel.guestexpress.util.applyfont.TextView
+                    android:id="@+id/tv_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@color/textWhite"
+                    android:text="@string/order"
+                    android:paddingTop="12dp"
+                    android:layout_toRightOf="@+id/iv_order_icon"
+                    android:layout_toLeftOf="@+id/iv_order_arrow"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    app:quickfont="Roboto-Regular_0.ttf"
+                    />
+
+
+                </RelativeLayout>
+        </FrameLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -196,3 +294,4 @@
     </LinearLayout>
 
 </LinearLayout>
+</ScrollView>

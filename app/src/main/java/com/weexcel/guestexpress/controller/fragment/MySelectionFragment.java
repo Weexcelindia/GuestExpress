@@ -43,10 +43,10 @@ public class MySelectionFragment extends Fragment {
         return rootView;
     }
 
-    /***
-     *
+    /**
+     * method to intialize ui interface
      * @param rootView
-     * User Defined method to initialize the UI and the variables
+     * the parent view to register the child view items
      */
     private void initUI(View rootView) {
         listView_ProductList = (ListView) rootView.findViewById(R.id.lv_productlist);

@@ -22,7 +22,6 @@
             android:layout_weight="1"
             android:gravity="right"
             android:text="@string/more_items"
-            android:layout_marginLeft="20dp"
             android:textSize="@dimen/splash_offer"
             app:quickfont="Roboto-Regular_0.ttf"
             >

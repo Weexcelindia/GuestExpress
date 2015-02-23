@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="wrap_content"
     android:background="@drawable/ic_benchmarkpizaa" >
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:text="Pizza"
-            android:padding="5dp"
+            android:padding="10dp"
             android:textColor="@color/textWhite"
             app:quickfont="Roboto-Regular_0.ttf"
             />

@@ -5,14 +5,22 @@ package com.weexcel.guestexpress.controller.activity; //Package Name
  * This is the Main Activity Class which runs first (Main Screen of the Application)
  */
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.TypefaceSpan;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.weexcel.guestexpress.R;
@@ -69,7 +77,7 @@ public class MainActivity extends FragmentActivity
                     Intent openMySelections = new Intent(getApplicationContext(), MySelectionActivity.class);
                     openMySelections.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(openMySelections);
-                    overridePendingTransition(R.anim.push_up_out, R.anim.push_up_in);
+                    overridePendingTransition(R.anim.anim_slide_in_left,R.anim.anim_slide_out_left);
                 }
             });
 
@@ -78,20 +86,31 @@ public class MainActivity extends FragmentActivity
     }
 
     /***
-     *
-     * @param fontName
      * User defined method to customize the ActionBar - apply the font on ActionBar Title
+     * @param fontName
+     * parameter used to set font of particluar fontfamily on view
      */
 
     public void customActionBarFont(String fontName)
     {
-        Typeface tf = QuickFontManager.getTypeface(getApplicationContext(), fontName).first;
-        int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
-        TextView yourTextView = (TextView) findViewById(titleId);
-        yourTextView.setTypeface(tf);
+        this.getActionBar().setHomeButtonEnabled(false);
+        this.getActionBar().setDisplayShowHomeEnabled(false);
+        this.getActionBar().setDisplayShowCustomEnabled(true);
+        this.getActionBar().setDisplayShowTitleEnabled(false);
+
+        LayoutInflater inflator = LayoutInflater.from(this);
+        View v = inflator.inflate(R.layout.custom_actionbar, null);
+
+
+        //if you need to customize anything else about the text, do it here.
+        //I'm using a custom TextView with a custom font in my layout xml so all I need to do is set title
+        ((TextView)v.findViewById(R.id.title)).setText(this.getTitle());
+
+
+
+        //assign the view to the actionbar
+        this.getActionBar().setCustomView(v);
     }
-
-
 }
 
 /*** Class Ends ***/

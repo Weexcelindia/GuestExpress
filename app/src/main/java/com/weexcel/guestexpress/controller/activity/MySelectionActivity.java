@@ -9,8 +9,15 @@ import android.app.ActionBar;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.TypefaceSpan;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import com.weexcel.guestexpress.R;
 import com.weexcel.guestexpress.controller.fragment.MySelectionFragment;
@@ -61,26 +68,56 @@ public class MySelectionActivity extends FragmentActivity {
     }
 
     /***
-     *
+     * User defined method to customize the ActionBar - apply the font on ActionBar Title
      * @param fontName
-     * User defined method to customize the ActionBar - apply the font on ActionBar Title and showing the home up button
+     * parameter used to set font of particluar fontfamily on view
      */
 
     public void customActionBarFont(String fontName)
     {
-        Typeface tf = QuickFontManager.getTypeface(getApplicationContext(), fontName).first;
-        int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
-        TextView yourTextView = (TextView) findViewById(titleId);
-        yourTextView.setTypeface(tf);
+//        Typeface tf = QuickFontManager.getTypeface(getApplicationContext(), fontName).first;
+//        int titleId = getResources().getIdentifier("action_bar_title", "id", "android");
+//        TextView yourTextView = (TextView) findViewById(titleId);
+//        yourTextView.setTypeface(tf);
 
-        ActionBar actionBar = getActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+
+//        SpannableString s = new SpannableString("Guest Express");
+//        s.setSpan(new TypefaceSpan(fontName), 0, s.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        s.setSpan(new ForegroundColorSpan(R.color.textWhite), 0, s.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+//        ActionBar actionBar = getActionBar();
+//        actionBar.setTitle(s);
+//        actionBar.setDisplayHomeAsUpEnabled(true);
+//        actionBar.setHomeButtonEnabled(true);
+
+
+        this.getActionBar().setHomeButtonEnabled(false);
+        this.getActionBar().setDisplayShowHomeEnabled(false);
+        this.getActionBar().setDisplayShowCustomEnabled(true);
+        this.getActionBar().setDisplayShowTitleEnabled(false);
+
+        LayoutInflater inflator = LayoutInflater.from(this);
+        View v = inflator.inflate(R.layout.custom_actionbar, null);
+
+        ImageView iconActionBar = (ImageView) v.findViewById(R.id.iconActionBar);
+        //if you need to customize anything else about the text, do it here.
+        //I'm using a custom TextView with a custom font in my layout xml so all I need to do is set title
+        ((TextView)v.findViewById(R.id.title)).setText(this.getTitle());
+
+        iconActionBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+        //assign the view to the actionbar
+        this.getActionBar().setCustomView(v);
+
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        overridePendingTransition(R.anim.push_down_in, R.anim.push_down_out);
+        overridePendingTransition(R.anim.anim_slide_in_right,R.anim.anim_slide_out_right);
     }
 }
 

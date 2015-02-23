@@ -6,48 +6,6 @@
     android:background="@drawable/ic_product_item"
     android:orientation="vertical" >
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="@color/black_transparent"
-        >
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:orientation="vertical"
-            android:padding="8dp" >
-
-            <com.weexcel.guestexpress.util.applyfont.TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:text="@string/meanwhile_chillies"
-                android:textColor="@color/textWhite"
-                app:quickfont="Roboto-Regular_0.ttf"
-                android:textSize="@dimen/splash_item_name" />
-
-            <com.weexcel.guestexpress.util.applyfont.TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:text="@string/dish_name"
-                android:textColor="@color/textWhite"
-                app:quickfont="Roboto-Regular_0.ttf"
-                android:textSize="@dimen/splash_offer" />
-        </LinearLayout>
-
-        <com.weexcel.guestexpress.util.applyfont.TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:text="@string/amount_pounds"
-            android:padding="8dp"
-            android:textColor="@color/textWhite"
-            app:quickfont="Roboto-Regular_0.ttf"
-            android:textSize="@dimen/splash_rate" />
-    </RelativeLayout>
 
 </RelativeLayout>
